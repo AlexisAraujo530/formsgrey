@@ -3,6 +3,7 @@ import db from "../db/db.json";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { Link } from "react-router-dom";
 
+
 const Forms = () => {
     let initialData = JSON.parse(JSON.stringify(db.items));
     const [data, setData] = useState(db.items);
@@ -42,6 +43,7 @@ const Forms = () => {
         setData(data);
         
     }
+    console.log("esto",process.env.REACT_APP_API_KEY)
 
     // creo una funcion que si el formulario se envio con exito, me redirija a la pagina principal
     // const confirmarFormulario = () => {
